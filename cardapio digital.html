@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Restaurante Sabor & Arte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .fundo1{
+            background-color: rgb(238, 207, 166);
+        }
+        #fundo2{
+            background-color: rgb(105, 60, 60);
+        }
+        #rodape{
+            background-color:  rgb(107, 56, 56);
+        }
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .price-tag {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .nav-pills .nav-link {
+            border-radius: 25px;
+            margin: 0 5px;
+            color:  rgb(105, 60, 60);
+        }
+        .nav-pills .nav-link.active {
+            background-color: white;
+            color: rgb(105, 60, 60);
+        }
+        .category-header {
+            background: rgb(105, 60, 60);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        #cor{
+            color: rgb(105, 60, 60) ;
+        }
+        #cor2{
+            background-color: rgb(105, 60, 60) ;
+        }
+    </style>
+</head>
+<body class="fundo1">
+    <!-- Header -->
+    <header class="text-white py-4" id="fundo2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="mb-0"><i class="fa-solid fa-cheese"></i> Doçeria Bom docinho</h1>
+                    <p class="lead mb-0">Experiências inesquecíveis, em formato de doce!</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="d-flex flex-column align-items-md-end">
+                        <small><i class="fas fa-phone me-1"></i>(81) 986870317</small>
+                        <small><i class="fas fa-map-marker-alt me-1"></i>Shopping Rio Mar, Térreo</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <!-- Navegação por Categorias -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-12">
+                <ul class="nav nav-pills justify-content-center flex-wrap" id="categoryTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="entradas-tab" data-bs-toggle="pill" data-bs-target="#entradas" type="button" role="tab">
+                            <i class="fa-solid fa-cheese"></i> Fatias e Copos
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="principais-tab" data-bs-toggle="pill" data-bs-target="#principais" type="button" role="tab">
+                            <i class="fa-solid fa-cookie"></i> Brownie e cookies
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="sobremesas-tab" data-bs-toggle="pill" data-bs-target="#sobremesas" type="button" role="tab">
+                            <i class="fa-solid fa-pizza-slice"></i> Salgados
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="bebidas-tab" data-bs-toggle="pill" data-bs-target="#bebidas" type="button" role="tab">
+                            <i class="fas fa-wine-glass me-2"></i>Bebidas
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Conteúdo das Categorias -->
+        <div class="tab-content" id="categoryTabsContent">
+            
+            <!-- ENTRADAS -->
+            <div class="tab-pane fade show active" id="entradas" role="tabpanel">
+                <div class="category-header text-center">
+                    <i class="fa-solid fa-cheese"></i>
+                    <h2 class="mb-0">Fatias e Copos</h2>
+                    <p class="mb-0">Esses são os queridinhos do Cardápio!</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Copo ninho com Nutella e morango</h5>
+                                    <span class="price-tag text-success">R$ 22,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Creme de ninho,Nutella pura com deliciosos pedaços de morango.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(4.8)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title" id="cor">Copo de kinder bueno com Brownie</h5>
+                                    <span class="price-tag text-success">R$ 30,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Pedaços de brownie com creme de kinder e pedaços kinder.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <small class="text-muted ms-1">(4.9)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Fatia Chocolatuda</h5>
+                                    <span class="price-tag text-success">R$ 16,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Fatia de chocolate com creme de chocolate ao leite e amargo</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(4.9)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title idcor">Fatia de morango</h5>
+                                    <span class="price-tag text-success">R$ 35,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Bolo branco com cobertura de morango cortado em pedaços</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(4.7)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRATOS PRINCIPAIS -->
+            <div class="tab-pane fade" id="principais" role="tabpanel">
+                <div class="category-header text-center">
+                    <i class="fa-solid fa-cookie"></i>
+                    <h2 class="mb-0">Brownie e Cookies</h2>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Fatia cookie</h5>
+                                    <span class="price-tag text-success">R$ 22,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Massa de cookie recheada com Nutella</p>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.8)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Cookie de red velvet</h5>
+                                    <span class="price-tag text-success">R$ 9,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Massa de cookie red velvet com gotas de chocolate branco</p>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <small class="text-muted ms-1">(4.5)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Cookie tradicional</h5>
+                                    <span class="price-tag text-success">R$ 8,90</span>
+                                </div>
+                                <p class="card-text text-muted mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.9)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Brownie de chocolate branco</h5>
+                                    <span class="price-tag text-success">R$ 8,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.9)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Brownie de chocolate</h5>
+                                    <span class="price-tag text-success">R$ 9,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <small class="text-muted ms-1">(4.6)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Brownie de bem casado</h5>
+                                    <span class="price-tag text-success">R$ 9,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <small class="text-muted ms-1">(4.4)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOBREMESAS -->
+            <div class="tab-pane fade" id="sobremesas" role="tabpanel">
+                <div class="category-header text-center">
+                    <i class="fa-solid fa-pizza-slice"></i>
+                    <h2 class="mb-0">Salgados</h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Pizza brotinho</h5>
+                                    <span class="price-tag text-success">R$ 10,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(4.8)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Coxinha com requeijão</h5>
+                                    <span class="price-tag text-success">R$ 10,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <small class="text-muted ms-1">(4.7)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Coxinha de charque</h5>
+                                    <span class="price-tag text-success">R$ 9,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(4.9)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 card-hover border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title " id="cor">Croassan de frango</h5>
+                                    <span class="price-tag text-success">R$ 16,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <small class="text-muted ms-1">(4.5)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- BEBIDAS -->
+            <div class="tab-pane fade" id="bebidas" role="tabpanel">
+    <div class="category-header text-center">
+        <i class="fas fa-wine-glass category-icon"></i>
+        <h2 class="mb-0">Bebidas</h2>
+        <p class="mb-0">Refrescantes opções para acompanhar seu doce ou salgado</p>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Bebidas Não Alcoólicas -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header  text-white text-center">
+                    <h5 class="mb-0" id="cor2"><i class="fas fa-tint me-2"></i>Não Alcoólicas</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Água Mineral</strong>
+                            <br><small class="text-muted">500ml</small>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">R$ 4,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Refrigerante</strong>
+                            <br><small class="text-muted">Lata 350ml</small>
+                        </div>
+                        <span class="badge rounded-pill">R$ 7,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Suco Natural</strong>
+                            <br><small class="text-muted">Laranja, limão, maracujá</small>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">R$ 12,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Água com Gás</strong>
+                            <br><small class="text-muted">500ml</small>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">R$ 6,90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cafés e Chás -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-warning text-dark text-center">
+                    <h5 class="mb-0" id="cor2"><i class="fas fa-coffee me-2"></i>Cafés & Chás</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Café Expresso</strong>
+                            <br><small class="text-muted">Tradicional</small>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill">R$ 6,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Cappuccino</strong>
+                            <br><small class="text-muted">Com espuma cremosa</small>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill">R$ 9,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Chá Gelado</strong>
+                            <br><small class="text-muted">Limão, pêssego</small>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill">R$ 8,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Café com Leite</strong>
+                            <br><small class="text-muted">Cremoso</small>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill">R$ 7,90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vinhos e Bebidas Alcoólicas -->
+        <div class="col-lg-4 col-md-12">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-danger text-white text-center">
+                    <h5 class="mb-0" id="cor2"><i class="fas fa-wine-bottle me-2"></i>Vinhos & Alcoólicas</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Vinho Tinto</strong>
+                            <br><small class="text-muted">Taça</small>
+                        </div>
+                        <span class="badge bg-danger rounded-pill">R$ 18,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Vinho Branco</strong>
+                            <br><small class="text-muted">Taça</small>
+                        </div>
+                        <span class="badge bg-danger rounded-pill">R$ 16,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Espumante</strong>
+                            <br><small class="text-muted">Taça</small>
+                        </div>
+                        <span class="badge bg-danger rounded-pill">R$ 22,90</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Cerveja</strong>
+                            <br><small class="text-muted">Long neck</small>
+                        </div>
+                        <span class="badge bg-danger rounded-pill">R$ 8,90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class=" text-white py-4 mt-5" id="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fa-solid fa-cheese"></i> Doçeria Bom docinho</h5>
+                    <p class="mb-0">Experiências inesquecíveis, em formato de doce!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1">
+                        <i class="fas fa-phone me-2"></i>(81)986870317
+                    </p>
+                    <p class="mb-1">
+                        <i class="fas fa-map-marker-alt me-2"></i>Shopping Rio Mar, Térreo
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-clock me-2"></i>Seg-Dom: 11h às 22h
+                    </p>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Doçeria Bom docinho. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
